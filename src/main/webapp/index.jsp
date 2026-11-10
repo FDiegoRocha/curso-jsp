@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Bem vindo ao Curso JSP</h1>
-	<form action="receber-nome.jsp">
+	<form action="ServletLogin" method="post">
 		<input name="nome">
 		<input name="idade">
 		<input type="submit" value="Enviar">
