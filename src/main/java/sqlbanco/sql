@@ -1,0 +1,15 @@
+CREATE DATABASE curso-jsp
+WITH OWNER = postgres
+	ENCONDING = 'UTF8'
+	TABLESPACE = pg_default
+	LC_COLLATE = 'Portuguse_Brazil.1252'
+	LC_CTYPE = 'Portuguse_Brazil.1252'
+	CONNECTION LIMIT = -1;
+
+CREATE TABLE model_login (
+	login character varying(255) UNIQUE,
+	senha character varying(255)
+	
+);
+
+INSERT INTO model_login (login, senha) VALUES ('admin', 'admin');
