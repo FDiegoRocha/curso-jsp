@@ -27,10 +27,9 @@ h1 {
 
 .msg {
 	position: absolute;
-	top: 60%;
+	top: 10%;
 	left: 37%;
-	font-size: 15px;
-	color: red;
+	font-size: 15px;	
 }
 </style>
 
@@ -43,7 +42,7 @@ h1 {
 		<input type="hidden" value="<%=request.getParameter("url")%>"
 			name="url">
 
-		<div class="col-md-6">
+		<div class="mb-3">
 			<label class="form-label">Login</label> <input class="form-control"
 				name="login" type="text" required="required">
 			<div class="invalid-feedback">Informe Login</div>
@@ -51,7 +50,7 @@ h1 {
 		</div>
 
 
-		<div class="col-md-6">
+		<div class="mb-3">
 			<label class="form-label">Senha</label> <input class="form-control"
 				name="senha" type="password" required="required">
 			<div class="invalid-feedback">Informe Senha</div>
@@ -62,7 +61,7 @@ h1 {
 		<input class="btn btn-primary" type="submit" value="Enviar">
 
 	</form>
-	<h4 class="msg">${msg}</h4>
+	<h4 class="msg alert alert-danger">${msg}</h4>
 
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
