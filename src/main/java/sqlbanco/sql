@@ -18,3 +18,8 @@ ALTER TABLE model_login add id serial Primary Key;
 
 ALTER TABLE model_login add nome character varying(255) UNIQUE;
 ALTER TABLE model_login add email character varying(255) UNIQUE;
+
+ALTER TABLE model_login DROP CONSTRAINT model_login_email_key;
+
+UPDATE model_login SET email = '';
+ALTER TABLE model_login ALTER COLUMN senha set NOT NULL;
