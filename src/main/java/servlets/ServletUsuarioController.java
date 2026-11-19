@@ -1,14 +1,13 @@
 package servlets;
 
-import jakarta.servlet.RequestDispatcher;
+import java.io.IOException;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.ModelLogin;
-
-import java.io.IOException;
 
 
 @WebServlet("/ServletUsuarioController")
@@ -41,8 +40,8 @@ public class ServletUsuarioController extends HttpServlet {
 		modelLogin.setLogin(login);
 		modelLogin.setSenha(senha);
 		
-		RequestDispatcher redireciona = request.getRequestDispatcher("principal/usuario.jsp");
-		redireciona.forward(request, response);
+		request.setAttribute("modelLogin", modelLogin);
+		request.getRequestDispatcher("principal/usuario.jsp").forward(request, response);
 		
 		
 	}

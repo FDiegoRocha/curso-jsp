@@ -13,3 +13,8 @@ CREATE TABLE model_login (
 );
 
 INSERT INTO model_login (login, senha) VALUES ('admin', 'admin');
+
+ALTER TABLE model_login add id serial Primary Key;
+
+ALTER TABLE model_login add nome character varying(255) UNIQUE;
+ALTER TABLE model_login add email character varying(255) UNIQUE;
